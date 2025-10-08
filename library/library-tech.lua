@@ -559,6 +559,7 @@ function CTDmod.lib.tech.replace_science_pack_globally(old_pack, new_pack)
     -- 0.3. Правильно скрываем старый пакет, рецепт и технологию
     if data.raw.tool[old_pack] then
         data.raw.tool[old_pack].subgroup = "hidden"
+        data.raw.tool[old_pack].hidden = true
         data.raw.tool[old_pack].order = "zzz"
     end
 
